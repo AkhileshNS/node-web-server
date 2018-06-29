@@ -41,6 +41,13 @@ App.get('/bad', (req, res) => {
     })
 })
 
+App.get('/projects', (req, res) => {
+    res.render('projects.hbs' ,{
+        title: 'Portfolio',
+        desc: 'This is where all the portfolio items live'
+    });
+})
+
 //Setup a listener (in this case to port 3000)
 App.listen(port, () => {
     console.log(`The server is available on port ${port}`);
